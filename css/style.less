@@ -34,7 +34,7 @@
 }
 
 // Box-Sizing
-.box-sizing (@box){
+.box-sizing (@box:border-box){
 	-moz-box-sizing: @box;
 	-webkit-box-sizing: @box;
 	box-sizing: @box;
@@ -44,8 +44,7 @@
 // --------------------------------------------------
 
 // Gradients
-#gradient {
-	.vertical(@startColor: #555, @endColor: #333) {
+.gradient(@startColor: #555, @endColor: #333) {
 		background-color: @endColor;
 		background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
 		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
@@ -54,8 +53,7 @@
 		background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
 		background-repeat: repeat-x;
 		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down
-	  }	
-}
+}	
 //######################### Mixins END ############################//
 
 
@@ -86,12 +84,16 @@
 @headerColor	: 	#181818;
 @themeColor		:	#fd7300;
 
+
+
 // colors
 @textColor		: 	#666666;
 @linkColor		: 	@themeColor;
 @linkHoverColor : 	@textColor;
 @borderColor	:	#2d2d2d;
 @footerColor	:	#ccc;
+@bannerColor	: 	#e1e1e1;
+
 
 //######################### Varialbes END ############################//
 
@@ -114,7 +116,7 @@ ______________________*/
 	
 }
 h1{
-	.heading( bold,  28px,  @baseFamily, @textColor, 0 0 20px);
+	.heading( bold,  24px,  @baseFamily, @bannerColor, 0 0 20px);
 	.divider{
 		border-left:1px solid #d7d7d7;
 		margin:0 12px 0 6px;
@@ -124,9 +126,7 @@ h1{
 }
 
 h2{
-	font-size:26px;
-	font-family: @altFamily;
-	color: @textColor;
+	.heading( bold,  22px,  @baseFamily, black, 0 0 10px);
 }
 h3{
 	.heading( bold,  22px,  @baseFamily, inherit, 0 0 10px);
@@ -195,10 +195,9 @@ ______________________*/
 	background: @themeColor;
 	min-height:50px;
 	position:relative;
-	margin-bottom:20px;
 	padding:5px 0;
 }
-.navbar-tranparent{
+.navbar-transparent{
 	background:none;
 	margin-bottom:0;
 	border:1px solid #fd9137;
@@ -250,9 +249,28 @@ ______________________*/
 	background:url(../images/pattren-2.png) repeat-x left bottom;
 	height:5px;
 }
-/******************************
-	Pattrens Settings End
-*******************************/
+
+
+/************************
+	Banner Settings 
+*************************/
+.banner-wrap{
+	background:url(../images/pattren-1.jpg);
+	padding:25px 0;
+	margin-bottom:30px;
+
+.input-transparent{
+	background: rgba(255,255,255,0.08);
+	border:none;
+	color: white;
+}	
+.form-group{
+	float:none !important;
+}
+.form-control:focus{
+	box-shadow:0 1px 1px rgba(253, 115, 0, 0.075) inset, 0 0 8px rgba(253, 115, 0, 0.6);
+}
+}
 
 /* Paginations  */
 .theme-pagination{
@@ -291,21 +309,101 @@ ______________________*/
 	}
 	
 }
-
-
-
-
-
-
-
-.sidebar-section{
-}
-/*  Main Area
--------------------------------------- */
+/**********************************
+		Main Area Settings 
+***********************************/
 #main-wrap{
 }
 #main{
 
+}
+/**********************************
+		Sidebar Settings 
+***********************************/
+
+.btn-facebook{
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	padding-left:15px;
+	padding-right:15px;
+	.box-sizing;
+	display:block;
+	.gradient(#116cc9, #0c60b4);
+	color:white;
+	text-shadow:-1px -1px 1px #000;
+	&:active, &:focus,
+	&:hover{
+		color: white;
+		outline:none;
+	}
+	.icon-facebook{
+		border-right:1px solid rgba(255,255,255,0.2);
+		padding-right:8px;
+		margin-right:5px
+	}
+}
+.sidebar-section{
+	padding:20px 0;
+	border-top:1px solid #dadada;
+	&:first-child{
+		border-top:none;
+	}
+	&.first-item{
+		padding:0 0 20px;
+	}	
+}
+.theme-box{
+	background:url(../images/pattren-6.jpg);
+}
+.box-header{
+	color:#333;
+	background:url(../images/pattren-5.jpg);
+	padding:10px 15px;
+	h3{
+		margin-bottom:0;
+	}
+}
+.box-body{
+	padding:13px;
+	a{
+		color : #333;
+	}
+}
+.btn{
+	&:focus{
+		outline:none;
+	}
+}
+
+
+
+/************************
+	Author Gallery Settings 
+*************************/
+.author-gallery{
+	margin-bottom:35px;
+	img{
+		width:100%;
+		display:block;
+	}
+	.gallery-footer{
+		border-top:3px solid @themeColor;
+		text-align:center;
+		padding:5px;
+		background:#111111;
+		a{
+			color:#bababa;
+			font-size: @baseFont - 2px;
+			margin-left:8%;
+			&:first-child{
+				margin-left:0;
+			}
+			&:hover{
+				color:@themeColor;
+			}
+		}
+	}
 }
 
 
@@ -326,6 +424,7 @@ ______________________*/
 		
 	}
 }
+.theme-text,
 .date-text{
 	color: @themeColor;
 }
@@ -340,11 +439,21 @@ ______________________*/
 	}
 }
 .author-lists{
+	li{
+		margin-bottom:3px;
+	}
 	a{
 		color:@footerColor;
 		&:hover{
 			color: @linkColor;
 		}
+	}
+	.theme-btn{
+		margin-top:8px;
+		color:#010101;
+		&:hover{
+			color: white;
+		}	
 	}
 }
 .footer-bottom{
@@ -353,9 +462,12 @@ ______________________*/
 	border-top: 1px solid @borderColor;
 	text-align:center;
 	padding:15px 0 5px;
+	
 }
 
-
+.theme-btn{
+	color:#010101;
+}
 
 
 /**********************
@@ -388,7 +500,14 @@ ______________________*/
 
 @media (max-width: 1200px){}
 @media (max-width: 979px) {}
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+.form-group{
+	display:inline-block;
+	vertical-align:top;
+	
+}
+
+}
 
 
 @media (max-width: 479px) {}

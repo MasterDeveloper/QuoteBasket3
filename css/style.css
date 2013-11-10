@@ -29,8 +29,8 @@ textarea {
 /* Headings
 ______________________*/
 h1 {
-  font: bold 28px Arial, sans-serif;
-  color: #666666;
+  font: bold 24px Arial, sans-serif;
+  color: #e1e1e1;
   margin: 0 0 20px;
 }
 h1 .divider {
@@ -39,9 +39,9 @@ h1 .divider {
   padding: 5px 0;
 }
 h2 {
-  font-size: 26px;
-  font-family: Arial, sans-serif;
-  color: #666666;
+  font: bold 22px Arial, sans-serif;
+  color: #000000;
+  margin: 0 0 10px;
 }
 h3 {
   font: bold 22px Arial, sans-serif;
@@ -103,10 +103,9 @@ ______________________*/
   background: #fd7300;
   min-height: 50px;
   position: relative;
-  margin-bottom: 20px;
   padding: 5px 0;
 }
-.navbar-tranparent {
+.navbar-transparent {
   background: none;
   margin-bottom: 0;
   border: 1px solid #fd9137;
@@ -114,24 +113,24 @@ ______________________*/
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-.navbar-tranparent .navbar-toggle {
+.navbar-transparent .navbar-toggle {
   background: black;
 }
-.navbar-tranparent .navbar-toggle .icon-bar {
+.navbar-transparent .navbar-toggle .icon-bar {
   background: #fd7300;
 }
-.navbar-tranparent .navbar-brand {
+.navbar-transparent .navbar-brand {
   margin-left: 0 !important;
 }
-.navbar-tranparent .nav a {
+.navbar-transparent .nav a {
   color: #000;
 }
-.navbar-tranparent .nav a:focus,
-.navbar-tranparent .nav a:hover {
+.navbar-transparent .nav a:focus,
+.navbar-transparent .nav a:hover {
   color: white;
   background: none;
 }
-.navbar-tranparent .nav .active a {
+.navbar-transparent .nav .active a {
   color: white;
   background: none;
 }
@@ -154,9 +153,25 @@ ______________________*/
   background: url(../images/pattren-2.png) repeat-x left bottom;
   height: 5px;
 }
-/******************************
-	Pattrens Settings End
-*******************************/
+/************************
+	Banner Settings 
+*************************/
+.banner-wrap {
+  background: url(../images/pattren-1.jpg);
+  padding: 25px 0;
+  margin-bottom: 30px;
+}
+.banner-wrap .input-transparent {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: white;
+}
+.banner-wrap .form-group {
+  float: none !important;
+}
+.banner-wrap .form-control:focus {
+  box-shadow: 0 1px 1px rgba(253, 115, 0, 0.075) inset, 0 0 8px rgba(253, 115, 0, 0.6);
+}
 /* Paginations  */
 .theme-pagination {
   padding: 0;
@@ -191,8 +206,101 @@ ______________________*/
 .theme-pagination li.active a {
   background: #191a1a;
 }
-/*  Main Area
--------------------------------------- */
+/**********************************
+		Main Area Settings 
+***********************************/
+/**********************************
+		Sidebar Settings 
+***********************************/
+.btn-facebook {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-left: 15px;
+  padding-right: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  background-color: #0c60b4;
+  background-image: -moz-linear-gradient(top, #116cc9, #0c60b4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#116cc9), to(#0c60b4));
+  background-image: -webkit-linear-gradient(top, #116cc9, #0c60b4);
+  background-image: -o-linear-gradient(top, #116cc9, #0c60b4);
+  background-image: linear-gradient(to bottom, #116cc9, #0c60b4);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff116cc9', endColorstr='#ff0c60b4', GradientType=0);
+  color: white;
+  text-shadow: -1px -1px 1px #000000;
+}
+.btn-facebook:active,
+.btn-facebook:focus,
+.btn-facebook:hover {
+  color: white;
+  outline: none;
+}
+.btn-facebook .icon-facebook {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  padding-right: 8px;
+  margin-right: 5px;
+}
+.sidebar-section {
+  padding: 20px 0;
+  border-top: 1px solid #dadada;
+}
+.sidebar-section:first-child {
+  border-top: none;
+}
+.sidebar-section.first-item {
+  padding: 0 0 20px;
+}
+.theme-box {
+  background: url(../images/pattren-6.jpg);
+}
+.box-header {
+  color: #333;
+  background: url(../images/pattren-5.jpg);
+  padding: 10px 15px;
+}
+.box-header h3 {
+  margin-bottom: 0;
+}
+.box-body {
+  padding: 13px;
+}
+.box-body a {
+  color: #333;
+}
+.btn:focus {
+  outline: none;
+}
+/************************
+	Author Gallery Settings 
+*************************/
+.author-gallery {
+  margin-bottom: 35px;
+}
+.author-gallery img {
+  width: 100%;
+  display: block;
+}
+.author-gallery .gallery-footer {
+  border-top: 3px solid #fd7300;
+  text-align: center;
+  padding: 5px;
+  background: #111111;
+}
+.author-gallery .gallery-footer a {
+  color: #bababa;
+  font-size: 13px;
+  margin-left: 8%;
+}
+.author-gallery .gallery-footer a:first-child {
+  margin-left: 0;
+}
+.author-gallery .gallery-footer a:hover {
+  color: #fd7300;
+}
 /*  Footer 
 -------------------------------------- */
 #footer-wrap {
@@ -204,6 +312,7 @@ ______________________*/
   padding: 30px 0 10px;
   color: #ccc;
 }
+.theme-text,
 .date-text {
   color: #fd7300;
 }
@@ -217,11 +326,21 @@ ______________________*/
 .footer-section:last-child {
   border-bottom: none;
 }
+.author-lists li {
+  margin-bottom: 3px;
+}
 .author-lists a {
   color: #cccccc;
 }
 .author-lists a:hover {
   color: #fd7300;
+}
+.author-lists .theme-btn {
+  margin-top: 8px;
+  color: #010101;
+}
+.author-lists .theme-btn:hover {
+  color: white;
 }
 .footer-bottom {
   background: url(../images/footer.png) #282828;
@@ -229,6 +348,9 @@ ______________________*/
   border-top: 1px solid #2d2d2d;
   text-align: center;
   padding: 15px 0 5px;
+}
+.theme-btn {
+  color: #010101;
 }
 /**********************
 	 Global Classes
@@ -277,7 +399,10 @@ ______________________*/
   
 }
 @media (max-width: 767px) {
-  
+  .form-group {
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 @media (max-width: 479px) {
   
