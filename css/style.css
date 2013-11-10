@@ -1,0 +1,284 @@
+/* Compiled Less CSS File */
+/* Generated from "style.css" */
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+/* Default Font Styles
+______________________*/
+body,
+input,
+select,
+textarea {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  color: #666666;
+}
+/* Headings
+______________________*/
+h1 {
+  font: bold 28px Arial, sans-serif;
+  color: #666666;
+  margin: 0 0 20px;
+}
+h1 .divider {
+  border-left: 1px solid #d7d7d7;
+  margin: 0 12px 0 6px;
+  padding: 5px 0;
+}
+h2 {
+  font-size: 26px;
+  font-family: Arial, sans-serif;
+  color: #666666;
+}
+h3 {
+  font: bold 22px Arial, sans-serif;
+  color: inherit;
+  margin: 0 0 10px;
+}
+h4 {
+  font: bold 16px Arial, sans-serif;
+  color: inherit;
+  margin: 0 0 10px;
+}
+/* Links
+______________________*/
+a {
+  color: #fd7300;
+}
+a:active,
+a:focus,
+a:hover {
+  outline: none;
+  color: #666666;
+  text-decoration: none;
+}
+/* p, blockquote, address
+______________________*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+p {
+  margin-bottom: 15px;
+}
+/* Header
+______________________*/
+#header-wrap {
+  background: url(../images/pattren-3.png) repeat-x left bottom #181818;
+  padding: 12px 0 20px;
+}
+#header-wrap .divider {
+  color: white;
+}
+#header-wrap a {
+  margin: 0 6px;
+  font-size: 12px;
+  vertical-align: middle;
+  display: inline-block;
+}
+#header-wrap .social-icons a {
+  color: #696969;
+}
+#header-wrap .social-icons a:hover {
+  color: #fd7300;
+}
+/* ___________________________ */
+/* ___________________________ */
+/* Navigation
+______________________*/
+#nav-wrap {
+  background: #fd7300;
+  min-height: 50px;
+  position: relative;
+  margin-bottom: 20px;
+  padding: 5px 0;
+}
+.navbar-tranparent {
+  background: none;
+  margin-bottom: 0;
+  border: 1px solid #fd9137;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.navbar-tranparent .navbar-toggle {
+  background: black;
+}
+.navbar-tranparent .navbar-toggle .icon-bar {
+  background: #fd7300;
+}
+.navbar-tranparent .navbar-brand {
+  margin-left: 0 !important;
+}
+.navbar-tranparent .nav a {
+  color: #000;
+}
+.navbar-tranparent .nav a:focus,
+.navbar-tranparent .nav a:hover {
+  color: white;
+  background: none;
+}
+.navbar-tranparent .nav .active a {
+  color: white;
+  background: none;
+}
+/******************************
+	Pattrens Settings 
+*******************************/
+.pattren-bottom {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 100%;
+  background: url(../images/pattren-4.png) repeat-x left bottom;
+  height: 5px;
+}
+.pattren-top {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 100%;
+  background: url(../images/pattren-2.png) repeat-x left bottom;
+  height: 5px;
+}
+/******************************
+	Pattrens Settings End
+*******************************/
+/* Paginations  */
+.theme-pagination {
+  padding: 0;
+  margin-bottom: 35px;
+}
+.theme-pagination li {
+  display: inline;
+  display: inline-block;
+  margin-right: -1px;
+}
+.theme-pagination li:first-child a {
+  width: 60px;
+  text-align: center;
+}
+.theme-pagination li a {
+  color: white;
+  display: inline-block;
+  background: #fd7300;
+  padding: 1px 9px 2px;
+  width: 27px;
+  height: 27px;
+  line-height: 24px;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.theme-pagination li a:hover {
+  background: #191a1a;
+  text-decoration: none;
+}
+.theme-pagination li.active a {
+  background: #191a1a;
+}
+/*  Main Area
+-------------------------------------- */
+/*  Footer 
+-------------------------------------- */
+#footer-wrap {
+  background: url(../images/pattren-1.jpg);
+  min-height: 150px;
+  position: relative;
+}
+#footer {
+  padding: 30px 0 10px;
+  color: #ccc;
+}
+.date-text {
+  color: #fd7300;
+}
+.footer-section {
+  border-bottom: 1px dotted #999;
+  margin-bottom: 20px;
+}
+.footer-section + .footer-section {
+  border-bottom: none;
+}
+.footer-section:last-child {
+  border-bottom: none;
+}
+.author-lists a {
+  color: #cccccc;
+}
+.author-lists a:hover {
+  color: #fd7300;
+}
+.footer-bottom {
+  background: url(../images/footer.png) #282828;
+  color: #565656;
+  border-top: 1px solid #2d2d2d;
+  text-align: center;
+  padding: 15px 0 5px;
+}
+/**********************
+	 Global Classes
+ **********************/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.cl {
+  clear: both;
+  font-size: 0;
+  height: 0;
+}
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+/* Alignments */
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.top {
+  vertical-align: top;
+}
+.middle {
+  vertical-align: middle;
+}
+/*****************************
+	 Global Classes End
+ *****************************/
+@media (max-width: 1200px) {
+  
+}
+@media (max-width: 979px) {
+  
+}
+@media (max-width: 767px) {
+  
+}
+@media (max-width: 479px) {
+  
+}

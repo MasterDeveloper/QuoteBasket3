@@ -1,0 +1,394 @@
+//
+// //######################### Mixins ############################//
+// --------------------------------------------------
+
+// Clearfix
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  &:after {
+    clear: both;
+  }
+}
+// Border Radius
+.radius(@radius) {
+  -moz-border-radius	: @radius;
+  -webkit-border-radius	: @radius;
+  border-radius			: @radius;
+}
+// Drop shadows
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+	 -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+// Opacity
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+// Box-Sizing
+.box-sizing (@box){
+	-moz-box-sizing: @box;
+	-webkit-box-sizing: @box;
+	box-sizing: @box;
+}
+
+// BACKGROUNDS
+// --------------------------------------------------
+
+// Gradients
+#gradient {
+	.vertical(@startColor: #555, @endColor: #333) {
+		background-color: @endColor;
+		background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+		background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+		background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+		background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
+		background-repeat: repeat-x;
+		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down
+	  }	
+}
+//######################### Mixins END ############################//
+
+
+
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em; }
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none; }
+
+
+//######################### Varialbes ############################//
+
+
+@baseFamily		:	Arial, sans-serif;
+@altFamily		:	Arial, sans-serif;
+@baseFont		:	15px;
+@headerColor	: 	#181818;
+@themeColor		:	#fd7300;
+
+// colors
+@textColor		: 	#666666;
+@linkColor		: 	@themeColor;
+@linkHoverColor : 	@textColor;
+@borderColor	:	#2d2d2d;
+@footerColor	:	#ccc;
+
+//######################### Varialbes END ############################//
+
+/* Default Font Styles
+______________________*/
+body, input, select, textarea{
+	font-family: @baseFamily;
+	font-size:@baseFont;
+	color: @textColor;
+}
+body{
+}
+
+/* Headings
+______________________*/
+.heading(@weight, @size, @family, @color, @margin){
+	font: @weight @size @family;
+	color: @color;
+	margin: @margin;
+	
+}
+h1{
+	.heading( bold,  28px,  @baseFamily, @textColor, 0 0 20px);
+	.divider{
+		border-left:1px solid #d7d7d7;
+		margin:0 12px 0 6px;
+		padding:5px 0;
+	}
+
+}
+
+h2{
+	font-size:26px;
+	font-family: @altFamily;
+	color: @textColor;
+}
+h3{
+	.heading( bold,  22px,  @baseFamily, inherit, 0 0 10px);
+}
+h4{
+	.heading( bold,  16px,  @baseFamily, inherit, 0 0 10px);
+}
+
+/* Links
+______________________*/
+a{
+	color: @linkColor;
+	&:active, &:focus, &:hover{
+		outline:none;
+		color: @linkHoverColor;
+		text-decoration:none;
+	}
+}
+a:hover {
+	
+}
+
+/* p, blockquote, address
+______________________*/
+img{
+	max-width: 100%;
+	height: auto;
+}
+p{
+	margin-bottom:15px;
+}
+
+/* Header
+______________________*/
+#header-wrap{
+	background:url(../images/pattren-3.png) repeat-x left bottom @headerColor;
+	padding:12px 0 20px;
+	.divider{
+		color: white;
+	}
+	a{
+		margin:0 6px;
+		font-size:12px;
+		vertical-align:middle;
+		display:inline-block;
+	}
+	.social-icons{
+		a{
+			color: @linkHoverColor + #030303;
+			&:hover{
+				color: @linkColor;
+			}
+		}
+	}
+}
+/* ___________________________ */
+//	Banner	
+/* ___________________________ */
+.sidebar-section{
+}
+
+
+/* Navigation
+______________________*/
+#nav-wrap{
+	background: @themeColor;
+	min-height:50px;
+	position:relative;
+	margin-bottom:20px;
+	padding:5px 0;
+}
+.navbar-tranparent{
+	background:none;
+	margin-bottom:0;
+	border:1px solid #fd9137;
+	.radius(0);
+	.navbar-toggle{
+		background: black;
+		.icon-bar{
+			background:@themeColor;
+		}
+	}
+	.navbar-brand{
+		margin-left:0 !important;
+	}
+	.nav{
+		a{
+			color:#000;
+			&:focus,
+			&:hover{
+				color:white;
+				background: none;
+			}
+		}
+		.active{
+			a{
+				color:white;
+				background: none;
+			}
+		}
+	}
+}
+
+/******************************
+	Pattrens Settings 
+*******************************/
+
+.pattren-bottom{
+	position:absolute;
+	right:0;
+	left:0;
+	top:100%;
+	background:url(../images/pattren-4.png) repeat-x left bottom;
+	height:5px;
+}
+.pattren-top{
+	position:absolute;
+	right:0;
+	left:0;
+	bottom:100%;
+	background:url(../images/pattren-2.png) repeat-x left bottom;
+	height:5px;
+}
+/******************************
+	Pattrens Settings End
+*******************************/
+
+/* Paginations  */
+.theme-pagination{
+	padding:0;
+	margin-bottom:35px;
+	li{
+		display:inline;
+		display:inline-block;
+		margin-right:-1px;
+		&:first-child{
+			a{
+				width:60px;
+				text-align:center;
+			}
+		}
+		a{
+			color: white;
+			display:inline-block;
+			background: @themeColor;
+			padding:1px 9px 2px;
+			width:27px;
+			height:27px;
+			line-height:24px;
+			text-align:center;
+			.box-sizing(border-box);
+			&:hover{
+				background: #191a1a;
+				text-decoration:none;
+			}
+		}
+		&.active{
+			a{
+				background: #191a1a;
+			}
+		}
+	}
+	
+}
+
+
+
+
+
+
+
+.sidebar-section{
+}
+/*  Main Area
+-------------------------------------- */
+#main-wrap{
+}
+#main{
+
+}
+
+
+
+/*  Footer 
+-------------------------------------- */
+
+
+#footer-wrap{
+	background:url(../images/pattren-1.jpg);
+	min-height:150px;
+	position:relative;
+}
+#footer{
+	padding:30px 0 10px;
+	color: #ccc;
+	h3{
+		
+	}
+}
+.date-text{
+	color: @themeColor;
+}
+.footer-section{
+	border-bottom:1px dotted #999;
+	margin-bottom:20px;
+	& + &{
+		border-bottom:none;
+	}
+	&:last-child{
+		border-bottom:none;
+	}
+}
+.author-lists{
+	a{
+		color:@footerColor;
+		&:hover{
+			color: @linkColor;
+		}
+	}
+}
+.footer-bottom{
+	background:url(../images/footer.png) #282828;
+	color: #565656;
+	border-top: 1px solid @borderColor;
+	text-align:center;
+	padding:15px 0 5px;
+}
+
+
+
+
+/**********************
+	 Global Classes
+ **********************/
+ 
+.fl{ float:left}
+.fr{ float:right}
+.cl{ clear:both; font-size:0; height:0; }
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* Alignments */
+.center { text-align:center }
+.right { text-align:right }
+.top {vertical-align:top }
+.middle { vertical-align:middle }
+
+/*****************************
+	 Global Classes End
+ *****************************/
+
+@media (max-width: 1200px){}
+@media (max-width: 979px) {}
+@media (max-width: 767px) {}
+
+
+@media (max-width: 479px) {}
