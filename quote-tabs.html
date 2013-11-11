@@ -22,6 +22,7 @@
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
     <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.bxslider.css" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link type="text/css" rel="stylesheet" href="css/rtl.css" />
     
@@ -35,11 +36,16 @@
     <![endif]-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
     <script type="text/javascript">
 		$(function(){
 			$('#myTab a').click(function (e) {
 			  e.preventDefault()
 				  $(this).tab('show')
+			});
+			$('.slider-1').bxSlider({
+				auto: true,
+				pager: false
 			});
 		});
     </script>
@@ -104,6 +110,37 @@
 <div class="pattren-bottom"></div>
 </div>
 <!--navigation end -->
+<div class="slider-wrap text-center">
+    <div class="container">
+        <ul class="slider-1 clearfix">
+            <li>
+                <p><a href="#" class="btn btn-transparent">Quote of the Day</a></p>
+                <p><sup class="icon-quote-left"></sup>We used to terrorize our babysitters when I was little, 
+except for my grandfather because he used to read to us from his will.<sub class="icon-quote-right"></sub></p>
+            </li>
+            <li>
+                <p><a href="#" class="btn btn-transparent">Quote of the Day</a></p>
+                <p><sup class="icon-quote-left"></sup>We used to terrorize our babysitters when I was little, 
+except for my grandfather because he used to read to us from his will.<sub class="icon-quote-right"></sub></p>
+            </li>
+            <li>
+                <p><a href="#" class="btn btn-transparent">Quote of the Day</a></p>
+                <p><sup class="icon-quote-left"></sup>We used to terrorize our babysitters when I was little, 
+except for my grandfather because he used to read to us from his will.<sub class="icon-quote-right"></sub></p>
+            </li>
+            <li>
+                <p><a href="#" class="btn btn-transparent">Quote of the Day</a></p>
+                <p><sup class="icon-quote-left"></sup>We used to terrorize our babysitters when I was little, 
+except for my grandfather because he used to read to us from his will.<sub class="icon-quote-right"></sub></p>
+            </li>
+            <li>
+                <p><a href="#" class="btn btn-transparent">Quote of the Day</a></p>
+                <p><sup class="icon-quote-left"></sup>We used to terrorize our babysitters when I was little, 
+except for my grandfather because he used to read to us from his will.<sub class="icon-quote-right"></sub></p>
+            </li>
+        </ul>
+    </div>
+</div>
 <div class="banner-wrap text-center">
 	<div class="container">
 		<h1>Search from over <span class="theme-text">10,0000</span> Quotes. Absolutely Free</h1>
