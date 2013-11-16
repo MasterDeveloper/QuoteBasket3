@@ -643,6 +643,39 @@ ______________________*/
   padding: 25px 0;
 }
 /**********************
+	 SignUp/Login
+ **********************/
+.model-wrap {
+  max-width: 600px;
+  margin: 15px auto;
+  background: white;
+  border: 5px solid #fd7300;
+  border-radius: 15px;
+}
+.model-wrap .form-control:focus {
+  border-color: #fd7300;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 182, 173, 0.6);
+}
+.model-wrap h3 {
+  margin: 10px 0;
+  color: #fd7300;
+  font-weight: 500;
+}
+.modal-header h3 {
+  margin-bottom: 0;
+}
+.modal-body {
+  color: #fd7300;
+  padding: 10px 20px 20px;
+}
+.form-control:focus {
+  border-color: #fd7300;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 182, 173, 0.6);
+}
+.rtl .close {
+  float: left;
+}
+/**********************
 	 Global Classes
  **********************/
 .fl {

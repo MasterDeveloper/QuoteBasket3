@@ -18,10 +18,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width" />
     
-    <title>Authors Pictures</title>
+    <title>Authors Details</title>
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
     <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.bxslider.css" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link type="text/css" rel="stylesheet" href="css/rtl.css" />
     
@@ -35,10 +36,23 @@
     <![endif]-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+    <script type="text/javascript">
+		$(function(){
+			$('#myTab a').click(function (e) {
+			  e.preventDefault()
+				  $(this).tab('show')
+			});
+			$('.slider-1').bxSlider({
+				auto: true,
+				pager: false
+			});
+		});
+    </script>
     
 </head>
 
-<body id="page-name">
+<body id="page-name" class="rtl">
 
 <div id="container-fluid">
 
@@ -96,6 +110,37 @@
 <div class="pattren-bottom"></div>
 </div>
 <!--navigation end -->
+<div class="slider-wrap text-center">
+    <div class="container">
+        <ul class="slider-1 clearfix">
+            <li>
+                <p><a href="#" class="btn btn-transparent">Quote of the Day</a></p>
+                <p><sup class="icon-quote-left"></sup>We used to terrorize our babysitters when I was little, 
+except for my grandfather because he used to read to us from his will.<sub class="icon-quote-right"></sub></p>
+            </li>
+            <li>
+                <p><a href="#" class="btn btn-transparent">Quote of the Day</a></p>
+                <p><sup class="icon-quote-left"></sup>We used to terrorize our babysitters when I was little, 
+except for my grandfather because he used to read to us from his will.<sub class="icon-quote-right"></sub></p>
+            </li>
+            <li>
+                <p><a href="#" class="btn btn-transparent">Quote of the Day</a></p>
+                <p><sup class="icon-quote-left"></sup>We used to terrorize our babysitters when I was little, 
+except for my grandfather because he used to read to us from his will.<sub class="icon-quote-right"></sub></p>
+            </li>
+            <li>
+                <p><a href="#" class="btn btn-transparent">Quote of the Day</a></p>
+                <p><sup class="icon-quote-left"></sup>We used to terrorize our babysitters when I was little, 
+except for my grandfather because he used to read to us from his will.<sub class="icon-quote-right"></sub></p>
+            </li>
+            <li>
+                <p><a href="#" class="btn btn-transparent">Quote of the Day</a></p>
+                <p><sup class="icon-quote-left"></sup>We used to terrorize our babysitters when I was little, 
+except for my grandfather because he used to read to us from his will.<sub class="icon-quote-right"></sub></p>
+            </li>
+        </ul>
+    </div>
+</div>
 <div class="banner-wrap text-center">
 	<div class="container">
 		<h1>Search from over <span class="theme-text">10,0000</span> Quotes. Absolutely Free</h1>
@@ -116,37 +161,114 @@
         	<div class="col-sm-9">
             	<div class="row">
                 	<div class="col-sm-12">
-                    	<div class="author-quote-wrap">
-                            <div class="quote-text dotted-section no-border">
-                            	<h2>Happiness | Bertrand Russell </h2>
-                                <p class="text-lg">My Concern is not whether God is on our side; my greatest concern is to be on God`s side, for God is always right.</p>
-                                <p><span>Tags: Without, Part </span></p>
-                                <img src="images/audio.jpg" alt="" />
+	                    <h2>Quentin Tarantino</h2>
+                        <ul class="nav nav-justified theme-tabs">
+                            <li><a href="#tab1" data-toggle="tab">Popular Quotes</a></li>
+                            <li><a href="#tab2" data-toggle="tab">Recently Added Quotes</a></li>
+                            <li><a href="#tab3" data-toggle="tab">Staff Picks</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
+                                <div class="author-quote-wrap">
+                                    <div class="quotes-section">
+                                        <span class="icon-quote-left"></span>
+                                        <p>I like it when somebody tells me a story, and I actually really feel that that's becoming like a lost art in American cinema. </p>
+                                        <p><small><em><a href="#">H. Jackson Brown, Jr.</a></em></small></p>
+                                        <div class="quotes-footer">
+                                            <div class="row">
+                                                <div class="col-sm-7"><img src="images/fb-like.jpg"  alt="" /></div>
+                                                <div class="col-sm-5 text-right"><small><em>Tags: Heart, Sometimes, Eye</em></small></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="quotes-section">
+                                        <span class="icon-quote-left"></span>
+                                        <p>Sometimes the heart sees what is invisible to the eye.</p>
+                                        <p><small><em><a href="#">H. Jackson Brown, Jr.</a></em></small></p>
+                                        <div class="quotes-footer">
+                                            <div class="row">
+                                                <div class="col-sm-7"><img src="images/fb-like.jpg"  alt="" /></div>
+                                                <div class="col-sm-5 text-right"><small><em>Tags: Heart, Sometimes, Eye</em></small></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="quotes-section">
+                                        <span class="icon-quote-left"></span>
+                                        <p>Sometimes the heart sees what is invisible to the eye.</p>
+                                        <p><small><em><a href="#">H. Jackson Brown, Jr.</a></em></small></p>
+                                        <div class="quotes-footer">
+                                            <div class="row">
+                                                <div class="col-sm-7"><img src="images/fb-like.jpg"  alt="" /></div>
+                                                <div class="col-sm-5 text-right"><small><em>Tags: Heart, Sometimes, Eye</em></small></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="quotes-section">
+                                        <span class="icon-quote-left"></span>
+                                        <p>Sometimes the heart sees what is invisible to the eye.</p>
+                                        <p><small><em><a href="#">H. Jackson Brown, Jr.</a></em></small></p>
+                                        <div class="quotes-footer">
+                                            <div class="row">
+                                                <div class="col-sm-7"><img src="images/fb-like.jpg"  alt="" /></div>
+                                                <div class="col-sm-5 text-right"><small><em>Tags: Heart, Sometimes, Eye</em></small></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="quotes-section">
+                                        <span class="icon-quote-left"></span>
+                                        <p>Sometimes the heart sees what is invisible to the eye.</p>
+                                        <p><small><em><a href="#">H. Jackson Brown, Jr.</a></em></small></p>
+                                        <div class="quotes-footer">
+                                            <div class="row">
+                                                <div class="col-sm-7"><img src="images/fb-like.jpg"  alt="" /></div>
+                                                <div class="col-sm-5 text-right"><small><em>Tags: Heart, Sometimes, Eye</em></small></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="quotes-section">
+                                        <span class="icon-quote-left"></span>
+                                        <p>Sometimes the heart sees what is invisible to the eye.</p>
+                                        <p><small><em><a href="#">H. Jackson Brown, Jr.</a></em></small></p>
+                                        <div class="quotes-footer">
+                                            <div class="row">
+                                                <div class="col-sm-7"><img src="images/fb-like.jpg"  alt="" /></div>
+                                                <div class="col-sm-5 text-right"><small><em>Tags: Heart, Sometimes, Eye</em></small></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="quotes-section">
+                                        <span class="icon-quote-left"></span>
+                                        <p>Sometimes the heart sees what is invisible to the eye.</p>
+                                        <p><small><em><a href="#">H. Jackson Brown, Jr.</a></em></small></p>
+                                        <div class="quotes-footer">
+                                            <div class="row">
+                                                <div class="col-sm-7"><img src="images/fb-like.jpg"  alt="" /></div>
+                                                <div class="col-sm-5 text-right"><small><em>Tags: Heart, Sometimes, Eye</em></small></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="quotes-section">
+                                        <span class="icon-quote-left"></span>
+                                        <p>Sometimes the heart sees what is invisible to the eye.</p>
+                                        <p><small><em><a href="#">H. Jackson Brown, Jr.</a></em></small></p>
+                                        <div class="quotes-footer">
+                                            <div class="row">
+                                                <div class="col-sm-7"><img src="images/fb-like.jpg"  alt="" /></div>
+                                                <div class="col-sm-5 text-right"><small><em>Tags: Heart, Sometimes, Eye</em></small></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="quote-text dotted-section">
-                                <p>Rate This Quote</p>
-                                <p>
-                                    <a href="#" class="icon-star active"></a>
-                                    <a href="#" class="icon-star active"></a>
-                                    <a href="#" class="icon-star active"></a>
-                                    <a href="#" class="icon-star active"></a>
-                                    <a href="#" class="icon-star active"></a>
-                                    <a href="#" class="icon-star"></a>
-                                </p>
-                                <p><small>4.33333333333 stars based on 3 ratings.</small></p>
-                                <p><span>You need to login first to rate this Quote!</span></p>
                             </div>
-                            <div class="dotted-section fb-like">
-                            	<p><img src="images/share-this.jpg" alt="" /></p>
-                            	<img src="images/fb-like.jpg" alt="" />
+                            <div class="tab-pane" id="tab2">
+                            	<p>Recently Added Quotes</p>
                             </div>
-                            <div class="dotted-section btn-section">
-                            	<p><a href="#" class="btn btn-lg btn-primary"><span class="icon-facebook"></span> Post OnFacebook</a>
-                                <a href="#" class="btn btn-lg btn-info"><span class="icon-twitter"></span> Tweet it</a>
-                                <a href="#" class="btn btn-lg btn-danger"><span class="icon-pinterest"></span> Pin it</a></p>
-                                <p><img src="images/fb-social-plugin.jpg" alt="" /></p>
+                            <div class="tab-pane" id="tab3">
+                            	<p>Staff Picks</p>
                             </div>
-						</div>
+                        </div>
                     </div>
                 </div>
             </div>
